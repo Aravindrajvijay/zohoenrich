@@ -12,7 +12,7 @@ int main()
         count++;
     }
     printf("\nBits required:\n%d",count);
-	return 0;
+    return 0;
 }
 int binary(int num)
 {
