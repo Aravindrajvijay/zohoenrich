@@ -11,6 +11,6 @@ int main()
         num = num/10;
     }
     printf("\nReversed Number: %d",rev);
-	  return 0;
+    return 0;
 }
 
