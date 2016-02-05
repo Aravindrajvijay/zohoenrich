@@ -4,11 +4,11 @@ int main(void)
 {
     int num;
     double sq_rt;
-	  printf("Number:");
-   	scanf("%d",&num);
-	  sq_rt=babylonian(num);
-	  printf("\nSquare Root:%f",sq_rt);
-	  return 0;
+    printf("Number:");
+    scanf("%d",&num);
+    sq_rt=babylonian(num);
+    printf("\nSquare Root:%f",sq_rt);
+    return 0;
 }
 double babylonian(int n)
 {
