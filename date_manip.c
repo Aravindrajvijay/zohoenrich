@@ -28,24 +28,24 @@ int main(void)
     y=d.year;
     m=d.month;
     d=d.day;
-	printf("\nThe Year = %d",d.year);
-	pre_year = previous_year();
-	printf("\nThe Previous Year = %d",pre_year);
-	printf("\nThe Month = %d",d.month);
-	month = month_name(d.month);
-	printf("\nThe month Name = %s",month);
-	prev_month = previous_month(d.month);
-	printf("\nThe Previous Month = %s",prev_month);
-	printf("\nThe Day in Number = %d",d.day);
-	day_in_words = day();
-	printf("\nThe Day Name = %s",day_in_words);
-	dayindex=day_index();
-	printf("\nDay Index of the Year = %d",dayindex);
-	d.day = date_before_N_days();
-	printf("\nDate before N days %d-%d-%d",d.year,d.month+1,d.day);
-	days_diff=date_difference(y,m,d);
-	printf("\nThe difference in date = %d",days_diff);
-	return 0;
+		printf("\nThe Year = %d",d.year);
+		pre_year = previous_year();
+		printf("\nThe Previous Year = %d",pre_year);
+		printf("\nThe Month = %d",d.month);
+		month = month_name(d.month);
+		printf("\nThe month Name = %s",month);
+		prev_month = previous_month(d.month);
+		printf("\nThe Previous Month = %s",prev_month);
+		printf("\nThe Day in Number = %d",d.day);
+		day_in_words = day();
+		printf("\nThe Day Name = %s",day_in_words);
+		dayindex=day_index();
+		printf("\nDay Index of the Year = %d",dayindex);
+		d.day = date_before_N_days();
+		printf("\nDate before N days %d-%d-%d",d.year,d.month+1,d.day);
+		days_diff=date_difference(y,m,d);
+		printf("\nThe difference in date = %d",days_diff);
+		return 0;
 }
 
 int previous_year()
@@ -149,15 +149,14 @@ void leap_check(int year)
 
 int date_difference(int year,int month,int day)
 {
-    char date[12];
-    int julian_day1,julian_day2,difference,y,m,d;
-    fgets( date, 12, stdin);
-    sscanf( date, "%d%*c%d%*c%d", &y, &m, &d);
-    
-    julian_day1 = julian(year, month, day); 
-    julian_day2 = julian(y, m, d); 
-    difference = abs(julian_day2 - julian_day1); 
-    return difference;
+   char date[12];
+   int julian_day1,julian_day2,difference,y,m,d;
+   fgets( date, 12, stdin);
+   sscanf( date, "%d%*c%d%*c%d", &y, &m, &d);
+   julian_day1 = julian(year, month, day); 
+   julian_day2 = julian(y, m, d); 
+   difference = abs(julian_day2 - julian_day1); 
+   return difference;
 }
 int julian(int year, int month, int day) 
 { 
