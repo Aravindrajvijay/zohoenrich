@@ -7,11 +7,12 @@ struct first_name
 };
 int main()
 {
-	struct first_name s[5];
+	struct first_name *s;
 	int i,n,j,m=0,len,count,k,index[10];
 	char temp[25],str[25];
 	printf("\nNumber of students:");
 	scanf("%d",&n);
+	s=(struct first_name*)malloc(sizeof(struct first_name)*n);
 	for(i=0;i<n;i++)
 	{
 		scanf("%d\t",&s[i].id);
@@ -23,7 +24,6 @@ int main()
 		len=strlen(temp);
 		for(j=0;j<len;j++)
 		{
-				
 			if(temp[j]=='.')
 			{
 				m=0;
@@ -54,9 +54,7 @@ int main()
 				count++;
 				index[m]=j;
 				m++;
-				
 			}
-			
 		}
 		if(*s[i].name!='\0')
 		{
