@@ -46,18 +46,18 @@ int main()
 	for(i=0;i<n;i++)
 	{
 	    count=1,m=0,k=0;
-		for(j=i+1;j<n;j++)
-		{
-			if(strcmp(s[i].name,s[j].name) == 0)
+			for(j=i+1;j<n;j++)
 			{
-	            *s[j].name='\0';
-				count++;
-				index[m]=j;
-				m++;
+				if(strcmp(s[i].name,s[j].name) == 0)
+				{
+		      *s[j].name='\0';
+					count++;
+					index[m]=j;
+					m++;
+				}
 			}
-		}
-		if(*s[i].name!='\0')
-		{
+			if(*s[i].name!='\0')
+			{
 		    printf("\n%s %d [%d",s[i].name,count,i+1);
 		    while(k<m)
 		    {
@@ -65,7 +65,7 @@ int main()
 			    k++;
 		    }
 		    printf("]");
-        }
+      }
 	}
 	return 0;
 }
