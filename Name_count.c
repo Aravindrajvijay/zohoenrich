@@ -36,7 +36,7 @@ int main()
 			else
 			{
 			    str[m]=temp[j];
-			    m++;
+			   	m++;
 			}
 		}
 		str[m]='\0';
@@ -46,14 +46,14 @@ int main()
 	for(i=0;i<n;i++)
 	{
 	    count=1,m=0,k=0;
-			for(j=i+1;j<n;j++)
+		for(j=i+1;j<n;j++)
+		{
+			if(strcmp(s[i].name,s[j].name) == 0)
 			{
-				if(strcmp(s[i].name,s[j].name) == 0)
-				{
-		      *s[j].name='\0';
-					count++;
-					index[m]=j;
-					m++;
+				*s[j].name='\0';
+				count++;
+				index[m]=j;
+				m++;
 				}
 			}
 			if(*s[i].name!='\0')
@@ -65,7 +65,7 @@ int main()
 			    k++;
 		    }
 		    printf("]");
-      }
+    	}
 	}
 	return 0;
 }
