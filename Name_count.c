@@ -7,9 +7,9 @@ struct details
 };
 struct first_name
 {
-    char f_name[25];
-    int index[10];
-    int count;
+    	char f_name[25];
+    	int index[10];
+    	int count;
 };
 
 int main()
@@ -52,7 +52,7 @@ int main()
 	}
 	for(i=0;i<n;i++)
 	{
-	    f[i].count=1;
+    		f[i].count=1;
 		m=0;
 		k=0;
 		for(j=i+1;j<n;j++)
